@@ -5,7 +5,10 @@ var input = process.argv;
 
 process.title = 'realurl';
 
-realurl.get(input[2]);
+realurl.get(input[2], function(real_url) {
+  console.log("\nReal URL location:");
+  console.log(real_url);
+});
 //realurl.get('http://goo.gl/ZRoZP');
 //realurl.get('http://bit.ly/2V6CFi');
 //realurl.get('http://t.co/HDJBoXIz');
