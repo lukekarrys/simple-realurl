@@ -1,16 +1,20 @@
 #!/usr/bin/env node
 
-var realurl = require('../lib');
-var input = process.argv;
-
 process.title = 'realurl';
 
-realurl.get(input[2], function(real_url) {
-  console.log("\nReal URL location:");
-  console.log(real_url);
+var realurl	= require('../lib');
+var input 	= process.argv;
+var url 	= input[2];
+
+console.log("\nRetrieving the real url for: " + url);
+
+realurl.get(url, function(result, error) {
+  if(error) {
+    console.error(result);
+    process.exit(1);
+  }
+  else {
+    console.log("\nReal URL location:");
+    console.log(result);
+  }
 });
-//realurl.get('http://goo.gl/ZRoZP');
-//realurl.get('http://bit.ly/2V6CFi');
-//realurl.get('http://t.co/HDJBoXIz');
-//realurl.get('http://tinyurl.com/1c2');
-//realurl.get('http://tamt.am/c3XRg');

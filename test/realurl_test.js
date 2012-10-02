@@ -23,8 +23,6 @@ var nock    = require('nock');
 
 exports['get'] = {
   setUp: function(done) {
-    done();
-    
     var shortUrl = nock('http://tst.org')
       .defaultReplyHeaders({'location': 'http://testdomain.org/some-long-part'})
       .get('/abc')
@@ -37,30 +35,56 @@ exports['get'] = {
     var unknownShortUrl = nock('http://shorturl.org')
       .get('/unknown')
       .reply(404);
-  },
-  'no or empty url': function(test) {
-    console.log = function (str) {
-        test.equal(str, 'Please specify an short url to process', 'should ask to specify shorturl for empty string');
-    };
 
-    test.expect(3);
-    realurl.get('');
-    realurl.get();
-    realurl.get(null);
-    test.done();
+    done();
+  },
+  'empty url': function(test) {
+    test.expect(2);
+
+    realurl.get('', function(result, error) {
+      test.equal(error, true, 'should set error to true');
+      test.equal(result, 'Please specify an short url to process for example:\n\n\tbin/realurl http://goo.gl/BGV9x', 'should ask to specify shorturl for empty string');
+      
+      test.done();
+    });
+  },
+  'no url specified': function(test) {
+    test.expect(2);
+
+    realurl.get(function(result, error) {
+      test.equal(error, true, 'should set error to true');
+      test.equal(result, 'Please specify an short url to process for example:\n\n\tbin/realurl http://goo.gl/BGV9x', 'should ask to specify shorturl for empty string');
+      
+      test.done();
+    });
+  },
+  'null url specified': function(test) {
+    test.expect(2);
+
+    realurl.get(null, function(result, error) {
+      test.equal(error, true, 'should set error to true');
+      test.equal(result, 'Please specify an short url to process for example:\n\n\tbin/realurl http://goo.gl/BGV9x', 'should ask to specify shorturl for empty string');
+      
+      test.done();
+    });
   },
   'single redirect': function(test) {
-    test.expect(1);
-    realurl.get('http://tst.org/abc', function(real_url) {
-      test.equal(real_url, 'http://testdomain.org/some-long-part', 'should retrieve the long url');
+    test.expect(2);
+
+    realurl.get('http://tst.org/abc', function(result, error) {
+      test.equal(error, false, 'should set error to false');
+      test.equal(result, 'http://testdomain.org/some-long-part', 'should retrieve the long url');
+      
       test.done();
     });
   },
   'wrong short url': function(test) {
-    test.expect(1);
+    test.expect(2);
 
-    realurl.get('http://shorturl.org/unknown', function(real_url) {
-      test.equal(real_url, 'Unknown short url. Double check it please...', 'should give unkown short url message');
+    realurl.get('http://shorturl.org/unknown', function(result, error) {
+      test.equal(error, true, 'should set error to true');
+      test.equal(result, 'Unknown short url. Double check it please...', 'should give unkown short url message');
+      
       test.done();
     });
   }
