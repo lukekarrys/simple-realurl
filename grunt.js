@@ -35,5 +35,7 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', 'lint test');
-
+ 
+  // Travis CI task.
+  grunt.registerTask('travis', 'lint test');
 };

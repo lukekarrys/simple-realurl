@@ -1,5 +1,6 @@
 var realurl = require('../lib');
 var nock    = require('nock');
+
 /*
   ======== A Handy Little Nodeunit Reference ========
   https://github.com/caolan/nodeunit
@@ -19,19 +20,6 @@ var nock    = require('nock');
     test.doesNotThrow(block, [error], [message])
     test.ifError(value)
 */
-
-/*exports['awesome'] = {
-  setUp: function(done) {
-    // setup here
-    done();
-  },
-  'no args': function(test) {
-    test.expect(1);
-    // tests here
-    test.equal(realurl.awesome(), 'awesome', 'should be awesome.');
-    test.done();
-  }
-};*/
 
 exports['get'] = {
   setUp: function(done) {
@@ -74,6 +62,6 @@ exports['get'] = {
     realurl.get('http://shorturl.org/unknown', function(real_url) {
       test.equal(real_url, 'Unknown short url. Double check it please...', 'should give unkown short url message');
       test.done();
-    })
+    });
   }
-}
+};
