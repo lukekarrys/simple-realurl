@@ -38,4 +38,3 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## License
 Copyright (c) 2012 Manuel van Rijn
 Licensed under the MIT license.
-<https://github.com/manuelvanrijn/node-realurl/blob/master/LICENSE-MIT>

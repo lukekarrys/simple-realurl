@@ -1,8 +1,8 @@
 {
   "name": "realurl",
-  "description": "The best project ever.",
+  "description": "A simple command-line/module to convert short url's to the original url.",
   "version": "0.1.0",
-  "homepage": "https://github.com/manuelvanrijn/node-realurl",
+  "homepage": "https://manuel.manuelles.nl/node-realurl",
   "author": {
     "name": "Manuel van Rijn",
     "email": "manuel@manuelles.nl"
@@ -11,9 +11,7 @@
     "type": "git",
     "url": "git://github.com/manuelvanrijn/node-realurl.git"
   },
-  "bugs": {
-    "url": "https://github.com/manuelvanrijn/node-realurl/issues"
-  },
+  "bugs": "https://github.com/manuelvanrijn/node-realurl/issues",
   "licenses": [
     {
       "type": "MIT",
