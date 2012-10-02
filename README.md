@@ -38,3 +38,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## License
 
 Copyright (c) 2012 Manuel van Rijn - Licensed under the MIT license.
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/3b2c11583454014a8437074fa7f0ad84 "githalytics.com")](http://githalytics.com/manuelvanrijn/node-realurl)
