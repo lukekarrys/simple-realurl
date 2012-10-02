@@ -1,27 +1,41 @@
-# realurl
+# Realurl
 
-The best project ever.
+A simple command line tool to convert short url's to the original url.
 
 ## Getting Started
-Install the module with: `npm install realurl`
+Install the module with: `npm install realurl -g`
+
+I would recommend installing it globally so you can use it from the command line.
+
+### From the command line
+
+```bash
+$ realurl http://goo.gl/BGV9x
+
+Retrieving the real url for: http://goo.gl/BGV9x
+
+Real URL location:
+https://github.com/manuelvanrijn/node-realurl
+```
+
+### Within your NodeJS project
 
 ```javascript
 var realurl = require('realurl');
-realurl.get('http://goo.gl/BGV9x') // "http://github.com/manuelvanrijn/node-realurl"
+realurl.get('http://goo.gl/BGV9x', function(result, error) {
+   // error = false;
+   // result = "http://github.com/manuelvanrijn/node-realurl";
+});
 ```
-
-## Documentation
-_(Coming soon)_
-
-## Examples
-_(Coming soon)_
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
 
 ## Release History
-_(Nothing yet)_
+
+* 2012/10/02 - v0.1.0 - Initial release.
 
 ## License
 Copyright (c) 2012 Manuel van Rijn
 Licensed under the MIT license.
+<https://github.com/manuelvanrijn/node-realurl/blob/master/LICENSE-MIT>
