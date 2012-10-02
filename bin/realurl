@@ -2,6 +2,7 @@
 
 process.title = 'realurl';
 
+require("copy-paste");
 var realurl	= require('../lib');
 var input 	= process.argv;
 var url 	= input[2];
@@ -14,6 +15,7 @@ realurl.get(url, function(result, error) {
     process.exit(1);
   }
   else {
+  	copy(result);
     console.log("\nReal URL location:");
     console.log(result);
   }
