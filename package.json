@@ -3,10 +3,7 @@
   "description": "A simple command-line/module to convert short url's to the original url.",
   "version": "0.1.0",
   "homepage": "https://manuel.manuelles.nl/node-realurl",
-  "author": {
-    "name": "Manuel van Rijn",
-    "email": "manuel@manuelles.nl"
-  },
+  "author": "Manuel van Rijn <manuel@manuelles.nl>",
   "repository": {
     "type": "git",
     "url": "git://github.com/manuelvanrijn/node-realurl.git"
@@ -25,17 +22,17 @@
   "scripts": {
     "test": "grunt travis --verbose"
   },
-  "dependencies": {
-    "url": "latest",
-    "http": "latest"
-  },
+  "dependencies": {},
   "devDependencies": {
     "grunt": "~0.3.9",
     "nock": "latest"
   },
   "keywords": [],
-  "bin": { 
-    "realurl": "bin/realurl" 
+  "bin": {
+    "realurl": "bin/realurl"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "directories": {
+    "test": "test"
+  }
 }
