@@ -1,4 +1,4 @@
-# Realurl
+# Realurl [![Build Status](https://secure.travis-ci.org/manuelvanrijn/node-realurl.png)](http://travis-ci.org/manuelvanrijn/node-realurl)
 
 A simple command line tool to convert short url's to the original url.
 
