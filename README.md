@@ -1,6 +1,6 @@
 # Realurl [![Build Status](https://secure.travis-ci.org/manuelvanrijn/node-realurl.png)](http://travis-ci.org/manuelvanrijn/node-realurl)
 
-A simple command line tool to convert short url's to the original url.
+A simple command-line/module to convert short url's to the original url.
 
 ## Getting Started
 Install the module with: `npm install realurl -g`
