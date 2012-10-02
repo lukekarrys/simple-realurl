@@ -1,0 +1,42 @@
+{
+  "name": "realurl",
+  "description": "The best project ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/manuelvanrijn/node-realurl",
+  "author": {
+    "name": "Manuel van Rijn",
+    "email": "manuel@manuelles.nl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/manuelvanrijn/node-realurl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/manuelvanrijn/node-realurl/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/manuelvanrijn/node-realurl/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/index.js",
+  "engines": {
+    "node": "~0.8.8"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "url": "latest",
+    "http": "latest"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.9"
+  },
+  "keywords": [],
+  "bin": { 
+    "realurl": "bin/realurl" 
+  },
+  "preferGlobal": true
+}

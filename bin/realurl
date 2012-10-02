@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var realurl = require('../lib');
+var input = process.argv;
+
+process.title = 'realurl';
+
+realurl.get(input[2]);
+//realurl.get('http://goo.gl/ZRoZP');
+//realurl.get('http://bit.ly/2V6CFi');
+//realurl.get('http://t.co/HDJBoXIz');
+//realurl.get('http://tinyurl.com/1c2');
+//realurl.get('http://tamt.am/c3XRg');
