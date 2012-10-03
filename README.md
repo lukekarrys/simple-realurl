@@ -33,6 +33,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+* 2012/10/03 - v0.1.1 - Fixed a bug regarding line endings...
 * 2012/10/02 - v0.1.0 - Initial release.
 
 ## License
