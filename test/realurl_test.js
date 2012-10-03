@@ -44,7 +44,7 @@ exports['get'] = {
     realurl.get('', function(result, error) {
       test.equal(error, true, 'should set error to true');
       test.equal(result, 'Please specify an short url to process for example:\n\n\tbin/realurl http://goo.gl/BGV9x', 'should ask to specify shorturl for empty string');
-      
+
       test.done();
     });
   },
@@ -54,7 +54,7 @@ exports['get'] = {
     realurl.get(function(result, error) {
       test.equal(error, true, 'should set error to true');
       test.equal(result, 'Please specify an short url to process for example:\n\n\tbin/realurl http://goo.gl/BGV9x', 'should ask to specify shorturl for empty string');
-      
+
       test.done();
     });
   },
@@ -64,7 +64,7 @@ exports['get'] = {
     realurl.get(null, function(result, error) {
       test.equal(error, true, 'should set error to true');
       test.equal(result, 'Please specify an short url to process for example:\n\n\tbin/realurl http://goo.gl/BGV9x', 'should ask to specify shorturl for empty string');
-      
+
       test.done();
     });
   },
@@ -74,7 +74,7 @@ exports['get'] = {
     realurl.get('http://tst.org/abc', function(result, error) {
       test.equal(error, false, 'should set error to false');
       test.equal(result, 'http://testdomain.org/some-long-part', 'should retrieve the long url');
-      
+
       test.done();
     });
   },
@@ -84,7 +84,7 @@ exports['get'] = {
     realurl.get('http://shorturl.org/unknown', function(result, error) {
       test.equal(error, true, 'should set error to true');
       test.equal(result, 'Unknown short url. Double check it please...', 'should give unkown short url message');
-      
+
       test.done();
     });
   }
