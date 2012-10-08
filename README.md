@@ -16,6 +16,8 @@ Retrieving the real url for: http://goo.gl/BGV9x
 
 Real URL location:
 https://github.com/manuelvanrijn/node-realurl
+
+Result has been copied to your clipboard
 ```
 
 ### Within your NodeJS project
