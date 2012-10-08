@@ -21,7 +21,7 @@
     "test": "grunt travis --verbose"
   },
   "dependencies": {
-    "copy-paste": "git://github.com/manuelvanrijn/node-copy-paste#exec-sync_clip-fix"
+    "copy-paste": "~> 0.0.4"
   },
   "devDependencies": {
     "grunt": "~0.3.9",
