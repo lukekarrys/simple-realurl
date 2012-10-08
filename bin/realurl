@@ -2,11 +2,12 @@
 
 process.title = 'realurl';
 
+require("copy-paste");
 var realurl	= require('../lib');
 var input 	= process.argv;
 var url 	= input[2];
 
-console.log("\nRetrieving the real url for: " + url);
+process.stdout.write("\nRetrieving the real url for: " + url);
 
 realurl.get(url, function(result, error) {
   if(error) {
@@ -14,7 +15,13 @@ realurl.get(url, function(result, error) {
     process.exit(1);
   }
   else {
-    console.log("\nReal URL location:");
-    console.log(result);
+    process.stdout.write("\n\nReal URL location:\n");
+    process.stdout.write(result);
+    process.stdout.write("\n\n");
+    
+    // tweak to skip console.log message from node-copy-paste library
+    console.log = function (str) {};
+    copy(result);
+    process.stdout.write("Result has been copied to your clipboard");
   }
 });

@@ -9,12 +9,10 @@
     "url": "git://github.com/manuelvanrijn/node-realurl.git"
   },
   "bugs": "https://github.com/manuelvanrijn/node-realurl/issues",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/manuelvanrijn/node-realurl/blob/master/LICENSE-MIT"
-    }
-  ],
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://github.com/manuelvanrijn/node-realurl/blob/master/LICENSE-MIT"
+  }],
   "main": "lib/index.js",
   "engines": {
     "node": ">=0.6"
@@ -22,7 +20,9 @@
   "scripts": {
     "test": "grunt travis --verbose"
   },
-  "dependencies": {},
+  "dependencies": {
+    "copy-paste": "~> 0.0.4"
+  },
   "devDependencies": {
     "grunt": "~0.3.9",
     "nock": "latest"
