@@ -39,31 +39,34 @@ exports['get'] = {
     done();
   },
   'empty url': function(test) {
-    test.expect(2);
+    test.expect(3);
 
-    realurl.get('', function(result, error) {
-      test.equal(error, true, 'should set error to true');
-      test.equal(result, 'Please specify an short url to process for example:\n\n\tbin/realurl http://goo.gl/BGV9x', 'should ask to specify shorturl for empty string');
+    realurl.get('', function(error, result) {
+      test.equal(error instanceof Error, true, 'error should be an instanceof Error');
+      test.equal(result, null, 'result should be null');
+      test.equal(error.message, 'Please specify a short url', 'should ask to specify shorturl');
 
       test.done();
     });
   },
   'no url specified': function(test) {
-    test.expect(2);
+    test.expect(3);
 
-    realurl.get(function(result, error) {
-      test.equal(error, true, 'should set error to true');
-      test.equal(result, 'Please specify an short url to process for example:\n\n\tbin/realurl http://goo.gl/BGV9x', 'should ask to specify shorturl for empty string');
+    realurl.get(function(error, result) {
+      test.equal(error instanceof Error, true, 'error should be an instanceof Error');
+      test.equal(result, null, 'result should be null');
+      test.equal(error.message, 'Please specify a short url', 'should ask to specify shorturl');
 
       test.done();
     });
   },
   'null url specified': function(test) {
-    test.expect(2);
+    test.expect(3);
 
-    realurl.get(null, function(result, error) {
-      test.equal(error, true, 'should set error to true');
-      test.equal(result, 'Please specify an short url to process for example:\n\n\tbin/realurl http://goo.gl/BGV9x', 'should ask to specify shorturl for empty string');
+    realurl.get(null, function(error, result) {
+      test.equal(error instanceof Error, true, 'error should be an instanceof Error');
+      test.equal(result, null, 'result should be null');
+      test.equal(error.message, 'Please specify a short url', 'should ask to specify shorturl');
 
       test.done();
     });
@@ -71,19 +74,20 @@ exports['get'] = {
   'single redirect': function(test) {
     test.expect(2);
 
-    realurl.get('http://tst.org/abc', function(result, error) {
-      test.equal(error, false, 'should set error to false');
+    realurl.get('http://tst.org/abc', function(error, result) {
+      test.equal(error, null, 'error should be null');
       test.equal(result, 'http://testdomain.org/some-long-part', 'should retrieve the long url');
 
       test.done();
     });
   },
   'wrong short url': function(test) {
-    test.expect(2);
+    test.expect(3);
 
-    realurl.get('http://shorturl.org/unknown', function(result, error) {
-      test.equal(error, true, 'should set error to true');
-      test.equal(result, 'Unknown short url. Double check it please...', 'should give unkown short url message');
+    realurl.get('http://shorturl.org/unknown', function(error, result) {
+      test.equal(error instanceof Error, true, 'error should be an instanceof Error');
+      test.equal(result, null, 'result should be null');
+      test.equal(error.message, 'URL resulted in a 404', 'should give unkown short url message');
 
       test.done();
     });

@@ -9,7 +9,7 @@ var url 	= input[2];
 
 process.stdout.write("\nRetrieving the real url for: " + url);
 
-realurl.get(url, function(result, error) {
+realurl.get(url, function(error, result) {
   if(error) {
     console.error(result);
     process.exit(1);
