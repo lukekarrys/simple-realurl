@@ -24,9 +24,19 @@ Result has been copied to your clipboard
 
 ```javascript
 var realurl = require('realurl');
-realurl.get('http://goo.gl/BGV9x', function(result, error) {
-   // error = false;
+realurl.get('http://goo.gl/BGV9x', function(error, result) {
+   // error = null;
    // result = "http://github.com/manuelvanrijn/node-realurl";
+});
+
+realurl.get('http://this-is-not-a-real-url.com/at-all', function(error, result) {
+   // error = Error('URL resulted in a 404');
+   // result = null;
+});
+
+realurl.get('', function(error, result) {
+   // error = Error('Please specify a short url');
+   // result = null;
 });
 ```
 
