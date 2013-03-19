@@ -45,6 +45,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+* 2013/03/19 - v0.1.3 - Async support by @lukekarrys.
 * 2012/10/08 - v0.1.2 - Added copy to clipboard support.
 * 2012/10/03 - v0.1.1 - Fixed a bug regarding line endings...
 * 2012/10/02 - v0.1.0 - Initial release.

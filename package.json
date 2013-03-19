@@ -1,7 +1,7 @@
 {
   "name": "realurl",
   "description": "A simple command-line/module to convert short url's to the original url.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://manuel.manuelles.nl/node-realurl",
   "author": "Manuel van Rijn <manuel@manuelles.nl>",
   "repository": {

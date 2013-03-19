@@ -21,7 +21,7 @@ var nock    = require('nock');
     test.ifError(value)
 */
 
-exports['get'] = {
+exports.get = {
   setUp: function(done) {
     var shortUrl = nock('http://tst.org')
       .defaultReplyHeaders({'location': 'http://testdomain.org/some-long-part'})
