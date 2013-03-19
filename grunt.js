@@ -13,24 +13,24 @@ module.exports = function(grunt) {
       files: '<config:lint.files>',
       tasks: 'default'
     },
-    jshint: {
-      options: {
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        boss: true,
-        eqnull: true,
-        node: true
-      },
-      globals: {
-        exports: true
+    jshint: (function() {
+      function parserc() {
+        var rc = grunt.file.readJSON('.jshintrc'),
+            settings = {
+              options: rc,
+              globals: {}
+            };
+
+        (rc.predef || []).forEach(function( prop ) {
+          settings.globals[prop] = true;
+        });
+        delete rc.predef;
+
+        return settings;
       }
-    }
+
+      return parserc();
+    })()
   });
 
   // Default task.
