@@ -18,13 +18,14 @@
     "node": ">=0.6"
   },
   "scripts": {
-    "test": "grunt travis --verbose"
+    "test": "grunt --verbose"
   },
   "dependencies": {
     "copy-paste": "~> 0.0.4"
   },
   "devDependencies": {
-    "grunt": "~0.3.9",
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "latest",
     "nock": "latest"
   },
   "keywords": [],

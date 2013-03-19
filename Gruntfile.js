@@ -14,20 +14,26 @@ module.exports = function(grunt) {
       tasks: 'default'
     },
     jshint: {
-      options: {
-        jshintrc: '.jshintrc'
+      gruntfile: {
+        options: {
+          jshintrc: '.jshintrc'
+        },
+        src: 'Gruntfile.js'
+      },
+      src: {
+        src: ['lib/**/*.js']
       },
       test: {
         options: {
           jshintrc: 'test/.jshintrc'
-        }
+        },
+        src: ['test/**/*.js']
       }
     }
   });
 
-  // Default task.
-  grunt.registerTask('default', 'lint test');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
-  // Travis CI task.
-  grunt.registerTask('travis', 'lint test');
+  // Default task
+  grunt.registerTask('default', ['jshint']);
 };

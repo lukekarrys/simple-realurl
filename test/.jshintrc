@@ -7,26 +7,12 @@
   "noarg": true,
   "sub": true,
   "undef": true,
-  "unused": true,
+  "unused": false,
   "boss": true,
   "eqnull": true,
-  "browser": true,
+  "browser": false,
   "predef": [
-    "jQuery",
-    "QUnit",
-    "module",
-    "test",
-    "asyncTest",
-    "expect",
-    "start",
-    "stop",
-    "ok",
-    "equal",
-    "notEqual",
-    "deepEqual",
-    "notDeepEqual",
-    "strictEqual",
-    "notStrictEqual",
-    "raises"
+    "require",
+    "exports"
   ]
 }
