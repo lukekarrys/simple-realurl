@@ -1,24 +1,12 @@
-# Realurl [![Build Status](https://secure.travis-ci.org/manuelvanrijn/node-realurl.png)](http://travis-ci.org/manuelvanrijn/node-realurl)
+# Node Simple Realurl
 
-A simple command-line/module to convert short url's to the original url.
+A simple node module to convert short url's to the original url.
+
+Based off [Manuel van Rijn's original realurl](https://github.com/manuelvanrijn/node-realurl), I created this to remove some dependencies (copypaste) and any global bin files.
 
 ## Getting Started
-Install the module with: `npm install realurl -g`
 
-I would recommend installing it globally so you can use it from the command line.
-
-### From the command line
-
-```bash
-$ realurl http://goo.gl/BGV9x
-
-Retrieving the real url for: http://goo.gl/BGV9x
-
-Real URL location:
-https://github.com/manuelvanrijn/node-realurl
-
-Result has been copied to your clipboard
-```
+Install the module with: `npm install simple-realurl`
 
 ### Within your NodeJS project
 
@@ -45,6 +33,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+* 2013/04/30 - v0.1.4 - *NEW FORK* - Removed all global, bin and copypaste code.
 * 2013/03/19 - v0.1.3 - Async support by @lukekarrys.
 * 2012/10/08 - v0.1.2 - Added copy to clipboard support.
 * 2012/10/03 - v0.1.1 - Fixed a bug regarding line endings...
@@ -53,5 +42,3 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## License
 
 Copyright (c) 2012 Manuel van Rijn - Licensed under the MIT license.
-
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/3b2c11583454014a8437074fa7f0ad84 "githalytics.com")](http://githalytics.com/manuelvanrijn/node-realurl)

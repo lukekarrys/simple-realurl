@@ -1,17 +1,17 @@
 {
-  "name": "realurl",
-  "description": "A simple command-line/module to convert short url's to the original url.",
-  "version": "0.1.3",
-  "homepage": "https://manuel.manuelles.nl/node-realurl",
-  "author": "Manuel van Rijn <manuel@manuelles.nl>",
+  "name": "simple-realurl",
+  "description": "A simple node module to convert short url's to the original url.",
+  "version": "0.1.4",
+  "homepage": "https://lukekarrys.github.io/simple-node-realurl",
+  "author": "Luke Karrys <lukekarrys@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/manuelvanrijn/node-realurl.git"
+    "url": "git://github.com/lukekarrys/simple-node-realurl.git"
   },
-  "bugs": "https://github.com/manuelvanrijn/node-realurl/issues",
+  "bugs": "https://github.com/lukekarrys/simple-node-realurl/issues",
   "licenses": [{
     "type": "MIT",
-    "url": "https://github.com/manuelvanrijn/node-realurl/blob/master/LICENSE-MIT"
+    "url": "https://github.com/lukekarrys/simple-node-realurl/blob/master/LICENSE-MIT"
   }],
   "main": "lib/index.js",
   "engines": {
@@ -26,11 +26,6 @@
     "grunt-contrib-nodeunit": "~0.1.2",
     "nock": "latest"
   },
-  "keywords": [],
-  "bin": {
-    "realurl": "bin/realurl"
-  },
-  "preferGlobal": true,
   "directories": {
     "test": "test"
   }
