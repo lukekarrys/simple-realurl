@@ -1,7 +1,7 @@
 {
   "name": "simple-realurl",
   "description": "A simple node module to convert short url's to the original url.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "https://lukekarrys.github.io/simple-node-realurl",
   "author": "Luke Karrys <lukekarrys@gmail.com>",
   "repository": {
