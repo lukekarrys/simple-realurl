@@ -1,5 +1,8 @@
 # Node Simple Realurl
 
+[![NPM](https://nodei.co/npm/simple-realurl.png)](https://nodei.co/npm/simple-realurl/)
+[![Build Status](https://travis-ci.org/lukekarrys/simple-realurl.png?branch=master)](https://travis-ci.org/lukekarrys/simple-realurl)
+
 A simple node module to convert short url's to the original url.
 
 Based off [Manuel van Rijn's original realurl](https://github.com/manuelvanrijn/node-realurl), I created this to remove some dependencies (copypaste) and any global bin files.

@@ -2,26 +2,8 @@
   "name": "simple-realurl",
   "description": "A simple node module to convert short url's to the original url.",
   "version": "1.0.0",
-  "homepage": "https://lukekarrys.github.io/simple-node-realurl",
   "author": "Luke Karrys <lukekarrys@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/lukekarrys/simple-node-realurl.git"
-  },
   "bugs": "https://github.com/lukekarrys/simple-node-realurl/issues",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/lukekarrys/simple-node-realurl/blob/master/LICENSE-MIT"
-    }
-  ],
-  "main": "lib/index.js",
-  "engines": {
-    "node": ">=0.7"
-  },
-  "scripts": {
-    "test": "grunt --verbose"
-  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-jshint": "latest",
@@ -30,5 +12,29 @@
   },
   "directories": {
     "test": "test"
+  },
+  "engines": {
+    "node": ">=0.7"
+  },
+  "homepage": "https://lukekarrys.github.io/simple-node-realurl",
+  "keywords": [
+    "url",
+    "realurl",
+    "url lengthener"
+  ],
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/lukekarrys/simple-node-realurl/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lukekarrys/simple-node-realurl.git"
+  },
+  "scripts": {
+    "test": "grunt --verbose"
   }
 }
