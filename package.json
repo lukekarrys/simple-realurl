@@ -8,7 +8,9 @@
     "grunt": "~0.4.1",
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-nodeunit": "~0.1.2",
-    "nock": "latest"
+    "jshint": "^2.5.6",
+    "nock": "latest",
+    "precommit-hook": "^1.0.7"
   },
   "directories": {
     "test": "test"
