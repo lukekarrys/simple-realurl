@@ -1,4 +1,4 @@
-# Node Simple Realurl
+# simple-realurl
 
 [![NPM](https://nodei.co/npm/simple-realurl.png)](https://nodei.co/npm/simple-realurl/)
 [![Build Status](https://travis-ci.org/lukekarrys/simple-realurl.png?branch=master)](https://travis-ci.org/lukekarrys/simple-realurl)
