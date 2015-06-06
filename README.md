@@ -14,7 +14,7 @@ Install the module with: `npm install simple-realurl`
 ### Within your NodeJS project
 
 ```javascript
-var realurl = require('realurl');
+var realurl = require('simple-realurl');
 realurl.get('http://goo.gl/BGV9x', function(error, result) {
    // error = null;
    // result = "http://github.com/manuelvanrijn/node-realurl";
