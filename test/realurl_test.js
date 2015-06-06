@@ -102,5 +102,16 @@ exports.get = {
 
       test.done();
     });
+  },
+  'handle dns errors': function(test) {
+    test.expect(3);
+
+    realurl.get('http://horse.bananana', function(error, result) {
+      test.equal(error instanceof Error, true, 'error should be an instanceof Error');
+      test.equal(result, null, 'result should be null');
+      test.equal(error.message, 'getaddrinfo ENOTFOUND', 'should give ENOTFOUND message');
+
+      test.done();
+    });
   }
 };
