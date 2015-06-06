@@ -29,6 +29,10 @@ realurl.get('', function(error, result) {
    // error = Error('Please specify a short url');
    // result = null;
 });
+
+realurl.get('url', {agent: false}, function(error, result) {
+  // bypasses Node's http/s client pool
+});
 ```
 
 ## Contributing

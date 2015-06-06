@@ -91,5 +91,16 @@ exports.get = {
 
       test.done();
     });
+  },
+  'allow options object': function(test) {
+    test.expect(3);
+
+    realurl.get('http://shorturl.org/unknown', {agent: false}, function(error, result) {
+      test.equal(error instanceof Error, true, 'error should be an instanceof Error');
+      test.equal(result, null, 'result should be null');
+      test.equal(error.message, 'URL resulted in a 404', 'should give unkown short url message');
+
+      test.done();
+    });
   }
 };
