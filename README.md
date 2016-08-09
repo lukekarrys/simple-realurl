@@ -2,6 +2,7 @@
 
 [![NPM](https://nodei.co/npm/simple-realurl.png)](https://nodei.co/npm/simple-realurl/)
 [![Build Status](https://travis-ci.org/lukekarrys/simple-realurl.png?branch=master)](https://travis-ci.org/lukekarrys/simple-realurl)
+[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 A simple node module to convert short url's to the original url.
 
@@ -9,7 +10,7 @@ Based off [Manuel van Rijn's original realurl](https://github.com/manuelvanrijn/
 
 ## Getting Started
 
-Install the module with: `npm install simple-realurl`
+Install the module with: `npm install simple-realurl --save`
 
 ### Within your NodeJS project
 
@@ -35,14 +36,7 @@ realurl.get('url', {agent: false}, function(error, result) {
 });
 ```
 
-## Release History
-
-* 2013/04/30 - v0.1.4 - *NEW FORK* - Removed all global, bin and copypaste code.
-* 2013/03/19 - v0.1.3 - Async support by @lukekarrys.
-* 2012/10/08 - v0.1.2 - Added copy to clipboard support.
-* 2012/10/03 - v0.1.1 - Fixed a bug regarding line endings...
-* 2012/10/02 - v0.1.0 - Initial release.
-
 ## License
 
 Copyright (c) 2012 Manuel van Rijn - Licensed under the MIT license.
+Copyright (c) 2012-2016 Luke Karrys - Licensed under the MIT license.

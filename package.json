@@ -9,9 +9,8 @@
   },
   "devDependencies": {
     "git-validate": "^2.1.4",
-    "grunt": "^1.0.1",
-    "grunt-contrib-nodeunit": "^1.0.0",
     "nock": "^8.0.0",
+    "nodeunit": "^0.9.1",
     "standard": "^8.0.0-beta.3"
   },
   "homepage": "https://lukekarrys.github.io/simple-node-realurl",
@@ -33,7 +32,7 @@
   },
   "scripts": {
     "lint": "standard",
-    "test": "grunt --verbose",
+    "test": "nodeunit test/*.js",
     "validate": "npm ls"
   }
 }
