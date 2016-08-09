@@ -4,42 +4,36 @@
   "version": "1.1.1",
   "author": "Luke Karrys <lukekarrys@gmail.com>",
   "bugs": "https://github.com/lukekarrys/simple-node-realurl/issues",
+  "dependencies": {
+    "lodash.merge": "^4.5.1"
+  },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "latest",
-    "grunt-contrib-nodeunit": "~0.1.2",
-    "jshint": "^2.5.6",
-    "nock": "latest",
-    "precommit-hook": "^1.0.7"
-  },
-  "directories": {
-    "test": "test"
-  },
-  "engines": {
-    "node": ">=0.7"
+    "git-validate": "^2.1.4",
+    "grunt": "^1.0.1",
+    "grunt-contrib-nodeunit": "^1.0.0",
+    "nock": "^8.0.0",
+    "standard": "^8.0.0-beta.3"
   },
   "homepage": "https://lukekarrys.github.io/simple-node-realurl",
   "keywords": [
-    "url",
     "realurl",
+    "url",
     "url lengthener"
   ],
   "license": "MIT",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/lukekarrys/simple-node-realurl/blob/master/LICENSE-MIT"
-    }
-  ],
   "main": "lib/index.js",
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/lukekarrys/simple-node-realurl.git"
   },
   "scripts": {
-    "test": "grunt --verbose"
-  },
-  "dependencies": {
-    "lodash.merge": "^3.3.1"
+    "lint": "standard",
+    "test": "grunt --verbose",
+    "validate": "npm ls"
   }
 }

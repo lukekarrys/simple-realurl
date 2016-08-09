@@ -109,7 +109,7 @@ exports.get = {
     realurl.get('http://horse.bananana', function(error, result) {
       test.equal(error instanceof Error, true, 'error should be an instanceof Error');
       test.equal(result, null, 'result should be null');
-      test.equal(error.message, 'getaddrinfo ENOTFOUND', 'should give ENOTFOUND message');
+      test.equal(error.message, 'getaddrinfo ENOTFOUND horse.bananana horse.bananana:80', 'should give ENOTFOUND message');
 
       test.done();
     });

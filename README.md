@@ -35,9 +35,6 @@ realurl.get('url', {agent: false}, function(error, result) {
 });
 ```
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
-
 ## Release History
 
 * 2013/04/30 - v0.1.4 - *NEW FORK* - Removed all global, bin and copypaste code.
