@@ -1,5 +1,7 @@
 # simple-realurl
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/lukekarrys/simple-realurl.svg)](https://greenkeeper.io/)
+
 [![NPM](https://nodei.co/npm/simple-realurl.png)](https://nodei.co/npm/simple-realurl/)
 [![Build Status](https://travis-ci.org/lukekarrys/simple-realurl.png?branch=master)](https://travis-ci.org/lukekarrys/simple-realurl)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
