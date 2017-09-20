@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "git-validate": "^2.1.4",
-    "nock": "^9.0.3",
+    "nock": "^9.0.17",
     "nodeunit": "^0.11.0",
     "standard": "^10.0.0"
   },
